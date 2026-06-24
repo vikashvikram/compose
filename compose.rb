@@ -2,7 +2,7 @@ class Compose < Formula
   desc "Lightweight native Docker Compose clone for macOS"
   homepage "https://github.com/vikashvikram/compose"
   url "https://github.com/vikashvikram/compose/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "REPLACE_WITH_TARBALL_SHA256"
+  sha256 "1b939c5b94d609f3cc69c86601ba09c3c48de771cd747c67e10533c2dc11942a"
   license "Apache-2.0"
 
   depends_on "go" => :build
