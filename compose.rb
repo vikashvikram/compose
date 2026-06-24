@@ -15,4 +15,12 @@ class Compose < Formula
   test do
     assert_match "macOS Container Compose Tool", shell_output("#{bin}/compose --help")
   end
+
+  def caveats
+    <<~EOS
+      This tool wraps macOS's native `container` command-line utility.
+      Please ensure you have the official Apple `container` tool installed
+      and available in your PATH.
+    EOS
+  end
 end
