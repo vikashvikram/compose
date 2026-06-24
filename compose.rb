@@ -6,6 +6,7 @@ class Compose < Formula
   license "Apache-2.0"
 
   depends_on "go" => :build
+  depends_on "container"
 
   def install
     # Compiles from source on install
@@ -18,9 +19,11 @@ class Compose < Formula
 
   def caveats
     <<~EOS
-      This tool wraps macOS's native `container` command-line utility.
-      Please ensure you have the official Apple `container` tool installed
-      and available in your PATH.
+      This tool wraps macOS's native `container` tool, which has been installed as a dependency.
+      To initialize and start the background container daemon, run:
+        brew services start container
+      Or start it on-demand with:
+        container system start
     EOS
   end
 end
