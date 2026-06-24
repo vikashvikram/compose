@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  ping-svc:
+    image: ubuntu:26.04
+    command: ["sleep", "120"]
+    environment:
+      - TEST_VAR=HelloCompose
+      - ANOTHER_VAR
+    env_file:
+      - ./test.env
+    ports:
+      - "9000:9000"
+    depends_on:
+      - build-svc
+
+  build-svc:
+    build:
+      context: .
+      dockerfile: Dockerfile
