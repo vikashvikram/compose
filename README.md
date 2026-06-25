@@ -21,8 +21,24 @@ Under the hood, it communicates with Apple's open-source `container` CLI utility
 ---
 
 ## Prerequisites
-* **macOS**: Built specifically for macOS.
-* **macOS Container Tool**: Requires the official Apple `container` command-line tool installed on your host.
+* **macOS**: Requires macOS 15 (Sequoia) or later running on Apple Silicon.
+
+---
+
+## Installation
+
+You can install `compose` along with its required dependencies using Homebrew:
+
+```bash
+# 1. Tap the repository
+brew tap vikashvikram/tap
+
+# 2. Install compose (this will automatically install the 'container' dependency)
+brew install compose
+
+# 3. Start the native macOS container background service
+brew services start container
+```
 
 ---
 
